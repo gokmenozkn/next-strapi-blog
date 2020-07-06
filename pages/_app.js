@@ -1,10 +1,8 @@
-import Navbar from 'components/Navbar'
-import 'public/card.css'
+import 'public/style.css'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Navbar />
       <Component {...pageProps} />
     </>
   )
