@@ -3,6 +3,8 @@
 import Layout from 'components/Layout';
 import moment from 'moment';
 import showdown from 'showdown';
+import Link from 'next/link';
+import Router from 'next/router';
 
 const converter = new showdown.Converter();
 
@@ -15,7 +17,9 @@ function Home({ articles }) {
           <span className="heading-2"> {article.title} </span>
           <span className="blog__post--date"> { moment(article.created_at).calendar() } </span>
           <div className="blog__post--paragraph" dangerouslySetInnerHTML={{__html: converter.makeHtml(article.content) }}></div>
-          <a href="" className="blog__post--button">Read On</a>
+          <Link href="/articles/[id]" as={`/articles/${article.id}`}>
+            <a className="blog__post--button">Read On</a>
+          </Link>
         </div>
       ))}
     </Layout>
