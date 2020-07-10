@@ -14,7 +14,7 @@ export default function Layout({ children, title }) {
         <title> {title} </title>
       </Head>
       {/* <body className="container"></body> */}
-      <div className="container">
+      <main className="container">
         {/** Navbar */}
         <section className="section">
           <nav className="navbar">
@@ -39,7 +39,7 @@ export default function Layout({ children, title }) {
           </div>
         </section>
         {/** Blog Container END */}
-      </div>
+      </main>
     </>
   )
 }

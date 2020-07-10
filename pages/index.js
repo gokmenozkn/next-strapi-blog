@@ -13,7 +13,7 @@ function Home({ articles }) {
       {articles.map(article => (
         <div className="blog__post" key={article.id}>
           <div className="blog__post--letter">{article.title[0]}</div>
-          <span className="heading-2"> {article.title} </span>
+          <h1 className="heading-2"> {article.title} </h1>
           <span className="blog__post--date"> { moment(article.created_at).calendar() } </span>
           <div className="blog__post--paragraph" dangerouslySetInnerHTML={{__html: converter.makeHtml(article.content) }}></div>
           <Link href="/articles/[id]" as={`/articles/${article.id}`}>
