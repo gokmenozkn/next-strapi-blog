@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Layout({ children }) {
+export default function Layout({ children, title }) {
   return (
     <>
       <Head>
@@ -11,6 +11,7 @@ export default function Layout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/d0d9868073.js" crossOrigin="anonymous"></script>
+        <title> {title} </title>
       </Head>
       {/* <body className="container"></body> */}
       <div className="container">

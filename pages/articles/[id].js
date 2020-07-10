@@ -6,7 +6,7 @@ const converter = new showdown.Converter();
 
 function Article({ post }) {
   return (
-    <Layout>
+    <Layout title={post.title}>
       <div className="blog__post">
         <div className="blog__post--letter">{post.title[0]}</div>
         <span className="heading-2">{post.title}</span>

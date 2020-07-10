@@ -1,5 +1,4 @@
-// import Head from 'next/head';
-// import fetch from 'isomorphic-unfetch';
+import Head from 'next/head';
 import Layout from 'components/Layout';
 import moment from 'moment';
 import showdown from 'showdown';
@@ -10,7 +9,7 @@ const converter = new showdown.Converter();
 
 function Home({ articles }) {
   return (
-    <Layout>
+    <Layout title="Codertwins">
       {articles.map(article => (
         <div className="blog__post" key={article.id}>
           <div className="blog__post--letter">{article.title[0]}</div>
