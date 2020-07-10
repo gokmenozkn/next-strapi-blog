@@ -133,8 +133,8 @@ html {
 }
 
 .blog-container .blog__post--button {
-  background-color: #00b593;
-  border: 1px solid #00b593;
+  background-color: #087561;
+  /* border: 1px solid #00b593; */
   padding: 1.4rem 5.3rem;
   font-family: "Josefin Sans", sans-serif;
   color: #fff;
