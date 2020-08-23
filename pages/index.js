@@ -15,7 +15,11 @@ function Home({ articles }) {
           <div className="blog__post--letter">{article.title[0]}</div>
           <h1 className="heading-2"> {article.title} </h1>
           <span className="blog__post--date"> { moment(article.created_at).calendar() } </span>
-          <div className="blog__post--paragraph" dangerouslySetInnerHTML={{__html: converter.makeHtml(article.content) }}></div>
+          <div className="blog__post--paragraph" 
+            dangerouslySetInnerHTML={
+              {__html: converter.makeHtml(article.content).substring(0, 100) + " ..." }}>
+
+              </div>
           <Link href="/articles/[id]" as={`/articles/${article.id}`}>
             <a className="blog__post--button">Read On</a>
           </Link>
