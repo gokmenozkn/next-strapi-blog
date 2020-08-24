@@ -146,3 +146,8 @@ html {
 .blog-container .blog__post--button:hover {
   box-shadow: 0 10px 20px 0 rgba(1, 1, 1, 0.15);
 }
+
+pre {
+  background-color: #eee;
+  padding: 2em;
+}
